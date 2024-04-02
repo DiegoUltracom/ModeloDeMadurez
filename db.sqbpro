@@ -1,2 +1,121 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/DiegoAlejandroFernán/Desktop/djangoproject/db.sqlite3" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="39868"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:mainauth_group"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">
-select * from solonum2</sql><current_tab id="0"/></tab_sql></sqlb_project>
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/DiegoAlejandroFernán/Desktop/MDM-c1f7325e299c70a28f9d26e3aedf02e73f988cb1/db.sqlite3" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="39868"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:mainauth_group"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="auth_group" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="40"/><column index="2" value="43"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">CREATE TRIGGER trig_respuestascuatro
+AFTER INSERT ON myapp_respuestascuatro
+FOR EACH ROW
+BEGIN
+    INSERT INTO preguntas_final (empresa, id_registro, respuesta_1, respuesta_2, respuesta_3, respuesta_4, respuesta_5,
+                                respuesta_6, respuesta_7, respuesta_8, respuesta_9, respuesta_10, respuesta_11, respuesta_12,
+                                respuesta_13, respuesta_14, respuesta_15, respuesta_16, respuesta_17, respuesta_18,
+                                respuesta_19, respuesta_20, respuesta_21, respuesta_22, respuesta_23, respuesta_24,
+                                respuesta_25, respuesta_26, respuesta_27, respuesta_28, respuesta_29, respuesta_30,
+                                respuesta_31, respuesta_32, respuesta_33, respuesta_34, respuesta_35)
+    SELECT
+        MAX(empresa) AS empresa,
+        ROW_NUMBER() OVER () AS id_registro,
+        MAX(respuesta_1) AS respuesta_1,
+        MAX(respuesta_2) AS respuesta_2,
+        MAX(respuesta_3) AS respuesta_3,
+        MAX(respuesta_4) AS respuesta_4,
+        MAX(respuesta_5) AS respuesta_5,
+        MAX(respuesta_6) AS respuesta_6,
+        MAX(respuesta_7) AS respuesta_7,
+        MAX(respuesta_8) AS respuesta_8,
+        MAX(respuesta_9) AS respuesta_9,
+        MAX(respuesta_10) AS respuesta_10,
+        MAX(respuesta_11) AS respuesta_11,
+        MAX(respuesta_12) AS respuesta_12,
+        MAX(respuesta_13) AS respuesta_13,
+        MAX(respuesta_14) AS respuesta_14,
+        MAX(respuesta_15) AS respuesta_15,
+        MAX(respuesta_16) AS respuesta_16,
+        MAX(respuesta_17) AS respuesta_17,
+        MAX(respuesta_18) AS respuesta_18,
+        MAX(respuesta_19) AS respuesta_19,
+        MAX(respuesta_20) AS respuesta_20,
+        MAX(respuesta_21) AS respuesta_21,
+        MAX(respuesta_22) AS respuesta_22,
+        MAX(respuesta_23) AS respuesta_23,
+        MAX(respuesta_24) AS respuesta_24,
+        MAX(respuesta_25) AS respuesta_25,
+        MAX(respuesta_26) AS respuesta_26,
+        MAX(respuesta_27) AS respuesta_27,
+        MAX(respuesta_28) AS respuesta_28,
+        MAX(respuesta_29) AS respuesta_29,
+        MAX(respuesta_30) AS respuesta_30,
+        MAX(respuesta_31) AS respuesta_31,
+        MAX(respuesta_32) AS respuesta_32,
+        MAX(respuesta_33) AS respuesta_33,
+        MAX(respuesta_34) AS respuesta_34,
+        MAX(respuesta_35) AS respuesta_35
+    FROM (
+        SELECT
+            ROW_NUMBER() OVER () AS row_num,
+            respuesta_1, respuesta_2, respuesta_3, respuesta_4, respuesta_5, respuesta_6, respuesta_7, respuesta_8, respuesta_9,
+            NULL AS respuesta_10, NULL AS respuesta_11, NULL AS respuesta_12, NULL AS respuesta_13, NULL AS respuesta_14,
+            NULL AS respuesta_15, NULL AS respuesta_16, NULL AS respuesta_17, NULL AS respuesta_18,
+            NULL AS respuesta_19, NULL AS respuesta_20, NULL AS respuesta_21, NULL AS respuesta_22, NULL AS respuesta_23,
+            NULL AS respuesta_24, NULL AS respuesta_25, NULL AS respuesta_26, NULL AS respuesta_27,
+            NULL AS respuesta_28, NULL AS respuesta_29, NULL AS respuesta_30, NULL AS respuesta_31, NULL AS respuesta_32,
+            NULL AS respuesta_33, NULL AS respuesta_34, NULL AS respuesta_35, NULL AS empresa
+        FROM myapp_respuestas
+        UNION ALL
+        SELECT
+            ROW_NUMBER() OVER () AS row_num,
+            NULL AS respuesta_1, NULL AS respuesta_2, NULL AS respuesta_3, NULL AS respuesta_4, NULL AS respuesta_5,
+            NULL AS respuesta_6, NULL AS respuesta_7, NULL AS respuesta_8, NULL AS respuesta_9,
+            respuesta_10, respuesta_11, respuesta_12, respuesta_13, respuesta_14, respuesta_15, respuesta_16,
+            respuesta_17, respuesta_18, NULL AS respuesta_19, NULL AS respuesta_20, NULL AS respuesta_21,
+            NULL AS respuesta_22, NULL AS respuesta_23, NULL AS respuesta_24, NULL AS respuesta_25, NULL AS respuesta_26,
+            NULL AS respuesta_27, NULL AS respuesta_28, NULL AS respuesta_29, NULL AS respuesta_30, NULL AS respuesta_31,
+            NULL AS respuesta_32, NULL AS respuesta_33, NULL AS respuesta_34, NULL AS respuesta_35, NULL AS empresa
+        FROM myapp_respuestasdos
+        UNION ALL
+        SELECT
+            ROW_NUMBER() OVER () AS row_num,
+            NULL AS respuesta_1, NULL AS respuesta_2, NULL AS respuesta_3, NULL AS respuesta_4, NULL AS respuesta_5,
+            NULL AS respuesta_6, NULL AS respuesta_7, NULL AS respuesta_8, NULL AS respuesta_9,
+            NULL AS respuesta_10, NULL AS respuesta_11, NULL AS respuesta_12, NULL AS respuesta_13, NULL AS respuesta_14,
+            NULL AS respuesta_15, NULL AS respuesta_16, NULL AS respuesta_17, NULL AS respuesta_18,
+            respuesta_19, respuesta_20, respuesta_21, respuesta_22, respuesta_23, respuesta_24, respuesta_25,
+            respuesta_26, respuesta_27, NULL AS respuesta_28, NULL AS respuesta_29, NULL AS respuesta_30,
+            NULL AS respuesta_31, NULL AS respuesta_32, NULL AS respuesta_33, NULL AS respuesta_34, NULL AS respuesta_35, NULL AS empresa
+        FROM myapp_respuestastres
+        UNION ALL
+        SELECT
+            ROW_NUMBER() OVER () AS row_num,
+            NULL AS respuesta_1, NULL AS respuesta_2, NULL AS respuesta_3, NULL AS respuesta_4, NULL AS respuesta_5,
+            NULL AS respuesta_6, NULL AS respuesta_7, NULL AS respuesta_8, NULL AS respuesta_9,
+            NULL AS respuesta_10, NULL AS respuesta_11, NULL AS respuesta_12, NULL AS respuesta_13, NULL AS respuesta_14,
+            NULL AS respuesta_15, NULL AS respuesta_16, NULL AS respuesta_17, NULL AS respuesta_18,
+            NULL AS respuesta_19, NULL AS respuesta_20, NULL AS respuesta_21, NULL AS respuesta_22, NULL AS respuesta_23,
+            NULL AS respuesta_24, NULL AS respuesta_25, NULL AS respuesta_26, NULL AS respuesta_27,
+            respuesta_28, respuesta_29, respuesta_30, respuesta_31, respuesta_32, respuesta_33, respuesta_34, respuesta_35, NULL AS empresa
+        FROM myapp_respuestascuatro
+        UNION ALL
+        SELECT
+            ROW_NUMBER() OVER () AS row_num,
+            NULL AS respuesta_1, NULL AS respuesta_2, NULL AS respuesta_3, NULL AS respuesta_4, NULL AS respuesta_5,
+            NULL AS respuesta_6, NULL AS respuesta_7, NULL AS respuesta_8, NULL AS respuesta_9,
+            NULL AS respuesta_10, NULL AS respuesta_11, NULL AS respuesta_12, NULL AS respuesta_13, NULL AS respuesta_14,
+            NULL AS respuesta_15, NULL AS respuesta_16, NULL AS respuesta_17, NULL AS respuesta_18,
+            NULL AS respuesta_19, NULL AS respuesta_20, NULL AS respuesta_21, NULL AS respuesta_22, NULL AS respuesta_23,
+            NULL AS respuesta_24, NULL AS respuesta_25, NULL AS respuesta_26, NULL AS respuesta_27,
+            NULL AS respuesta_28, NULL AS respuesta_29, NULL AS respuesta_30, NULL AS respuesta_31, NULL AS respuesta_32,
+            NULL AS respuesta_33, NULL AS respuesta_34, NULL AS respuesta_35, empresa
+        FROM myapp_registro
+    ) AS combined_data
+    WHERE row_num = (
+        SELECT MAX(row_num) FROM (
+            SELECT ROW_NUMBER() OVER () AS row_num FROM myapp_respuestas
+            UNION ALL
+            SELECT ROW_NUMBER() OVER () AS row_num FROM myapp_respuestasdos
+            UNION ALL
+            SELECT ROW_NUMBER() OVER () AS row_num FROM myapp_respuestastres
+            UNION ALL
+            SELECT ROW_NUMBER() OVER () AS row_num FROM myapp_respuestascuatro
+            UNION ALL
+            SELECT ROW_NUMBER() OVER () AS row_num FROM myapp_registro
+        ) AS all_rows
+    )
+    GROUP BY row_num;
+END
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
