@@ -1,0 +1,453 @@
+.frame {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .frame .div {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 1920px;
+    height: 4721px;
+    position: relative;
+  }
+  
+  .frame .INICIO {
+    position: absolute;
+    width: 1921px;
+    height: 626px;
+    top: -1px;
+    left: 0;
+  }
+  
+  .frame .overlap {
+    position: relative;
+    width: 1920px;
+    height: 624px;
+    top: 1px;
+  }
+  
+  .frame .rectangle {
+    width: 1920px;
+    height: 90px;
+    top: 534px;
+    background: linear-gradient(180deg, rgb(62, 76, 89) 7.57%, rgba(62, 76, 89, 0) 100%);
+    position: absolute;
+    left: 0;
+  }
+  
+  .frame .img {
+    position: absolute;
+    width: 1919px;
+    height: 542px;
+    top: 0;
+    left: 1px;
+    object-fit: cover;
+  }
+  
+  .frame .texto {
+    position: absolute;
+    width: 756px;
+    height: 129px;
+    top: 314px;
+    left: 188px;
+  }
+  
+  .frame .overlap-group {
+    position: relative;
+    width: 753px;
+    height: 128px;
+    left: -1px;
+  }
+  
+  .frame .text-wrapper {
+    position: absolute;
+    width: 752px;
+    top: 0;
+    left: 1px;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 96px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .frame .p {
+    position: absolute;
+    top: 103px;
+    left: 0;
+    -webkit-text-stroke: 1px #ffffff;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .frame .LOGO-BLANCO {
+    position: absolute;
+    width: 367px;
+    height: 131px;
+    top: 37px;
+    left: 86px;
+    object-fit: cover;
+  }
+  
+  .frame .text-wrapper-2 {
+    position: absolute;
+    width: 1126px;
+    top: 658px;
+    left: 188px;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 96px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .frame .text-wrapper-3 {
+    position: absolute;
+    width: 318px;
+    top: 2822px;
+    left: 801px;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 96px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .frame .un-modelo-de-madurez {
+    position: absolute;
+    width: 750px;
+    top: 817px;
+    left: 192px;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 28px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .foto {
+    position: absolute;
+    width: 721px;
+    height: 721px;
+    top: 801px;
+    left: 1009px;
+    object-fit: cover;
+  }
+  
+  .frame .image {
+    position: absolute;
+    width: 1716px;
+    height: 1188px;
+    top: 1562px;
+    left: 102px;
+    object-fit: cover;
+  }
+  
+  .frame .FIN {
+    position: absolute;
+    width: 1920px;
+    height: 335px;
+    top: 4386px;
+    left: 0;
+    background-color: #3e4c59;
+  }
+  
+  .frame .LOGO-BLANCO-2 {
+    position: absolute;
+    width: 367px;
+    height: 131px;
+    top: 102px;
+    left: 776px;
+    object-fit: cover;
+  }
+  
+  .frame .overlap-2 {
+    position: absolute;
+    width: 1920px;
+    height: 502px;
+    top: 3001px;
+    left: 0;
+    background-color: #203864;
+  }
+  
+  .frame .group {
+    left: 102px;
+    position: absolute;
+    width: 310px;
+    height: 323px;
+    top: 90px;
+  }
+  
+  .frame .overlap-3 {
+    position: relative;
+    width: 306px;
+    height: 323px;
+  }
+  
+  .frame .rectangle-2 {
+    width: 306px;
+    height: 323px;
+    top: 0;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+  }
+  
+  .frame .la-organizaci-n {
+    position: absolute;
+    width: 306px;
+    top: 90px;
+    left: 0;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .span {
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+  
+  .frame .text-wrapper-4 {
+    font-size: 28px;
+  }
+  
+  .frame .text-wrapper-5 {
+    position: absolute;
+    width: 306px;
+    top: 26px;
+    left: 0;
+    -webkit-text-stroke: 0.5px #203864;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .ellipse {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    left: 94px;
+    background-color: #ec7d36;
+    border-radius: 8px;
+  }
+  
+  .frame .ellipse-2 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    left: 120px;
+    background-color: #d9d9d9;
+    border-radius: 8px;
+  }
+  
+  .frame .ellipse-3 {
+    left: 146px;
+    background-color: #d9d9d9;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    border-radius: 8px;
+  }
+  
+  .frame .ellipse-4 {
+    left: 172px;
+    background-color: #d9d9d9;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    border-radius: 8px;
+  }
+  
+  .frame .ellipse-5 {
+    left: 198px;
+    background-color: #d9d9d9;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    border-radius: 8px;
+  }
+  
+  .frame .overlap-wrapper {
+    left: 454px;
+    position: absolute;
+    width: 310px;
+    height: 323px;
+    top: 90px;
+  }
+  
+  .frame .text-wrapper-6 {
+    position: absolute;
+    width: 306px;
+    top: 96px;
+    left: 0;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .ellipse-6 {
+    left: 94px;
+    background-color: #d9d9d9;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    border-radius: 8px;
+  }
+  
+  .frame .ellipse-7 {
+    left: 120px;
+    background-color: #ec7d36;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    border-radius: 8px;
+  }
+  
+  .frame .overlap-group-wrapper {
+    left: 806px;
+    position: absolute;
+    width: 310px;
+    height: 323px;
+    top: 90px;
+  }
+  
+  .frame .ellipse-8 {
+    left: 146px;
+    background-color: #ec7d36;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    border-radius: 8px;
+  }
+  
+  .frame .div-wrapper {
+    left: 1159px;
+    position: absolute;
+    width: 310px;
+    height: 323px;
+    top: 90px;
+  }
+  
+  .frame .la-organizaci-n-se {
+    position: absolute;
+    width: 306px;
+    top: 98px;
+    left: 0;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .text-wrapper-7 {
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+  
+  .frame .text-wrapper-8 {
+    font-size: 36px;
+  }
+  
+  .frame .text-wrapper-9 {
+    position: absolute;
+    width: 306px;
+    top: 28px;
+    left: 0;
+    -webkit-text-stroke: 0.5px #203864;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .ellipse-9 {
+    left: 172px;
+    background-color: #ec7d36;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    border-radius: 8px;
+  }
+  
+  .frame .group-2 {
+    left: 1512px;
+    position: absolute;
+    width: 310px;
+    height: 323px;
+    top: 90px;
+  }
+  
+  .frame .text-wrapper-10 {
+    position: absolute;
+    width: 284px;
+    top: 98px;
+    left: 12px;
+    font-family: "Questrial-Regular", Helvetica;
+    font-weight: 400;
+    color: #203864;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .frame .ellipse-10 {
+    left: 198px;
+    background-color: #ec7d36;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 287px;
+    border-radius: 8px;
+  }
