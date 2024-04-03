@@ -16,3 +16,14 @@ mysite/__pycache__/settings.cpython-311.pyc
 mysite/__pycache__/urls.cpython-311.pyc
 mysite/__pycache__/wsgi.cpython-311.pyc
 
+mysite/__pycache__/wsgi.cpython-311.pyc
+mysite/__pycache__/urls.cpython-311.pyc
+# Ignora los archivos generados por Python
+*.pyc
+__pycache__/
+
+# Ignora los archivos de migraciones de Django
+**/migrations/
+
+# Ignora el archivo de configuración local
+**/settings_local.py
