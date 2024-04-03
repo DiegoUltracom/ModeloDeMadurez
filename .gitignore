@@ -27,3 +27,4 @@ __pycache__/
 
 # Ignora el archivo de configuración local
 **/settings_local.py
+
