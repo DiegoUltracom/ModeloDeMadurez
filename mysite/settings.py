@@ -35,8 +35,8 @@ SECRET_KEY = 'django-insecure-(i1or=0_y3f4np(iq+-5x94@z#=y&^qt=k=%en*f3!cd+pqa5b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wa-modelomadurez-ultracom.azurewebsites.net']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['wa-modelomadurez-ultracom.azurewebsites.net']
+ALLOWED_HOSTS = []
 
 # Application definition
 
