@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 
-
 from pathlib import Path
 from django.core.management.commands.runserver import Command as runserver
 runserver.default_port = "8080"
@@ -35,8 +34,8 @@ SECRET_KEY = 'django-insecure-(i1or=0_y3f4np(iq+-5x94@z#=y&^qt=k=%en*f3!cd+pqa5b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['wa-modelomadurez-ultracom.azurewebsites.net']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wa-modelomadurez-ultracom.azurewebsites.net']
+#ALLOWED_HOSTS = []
 
 # Application definition
 
