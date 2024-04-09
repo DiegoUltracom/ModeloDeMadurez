@@ -37,7 +37,7 @@ def home_view(request):
             )
 
             # Guarda la instancia en la base de datos
-            registro.save()
+            nuevo_registro.save()
 
             # Redirige a la vista 'indexdos' después de completar el formulario
             return redirect('indexdos')
