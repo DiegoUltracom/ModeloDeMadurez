@@ -35,8 +35,8 @@ SECRET_KEY = 'django-insecure-(i1or=0_y3f4np(iq+-5x94@z#=y&^qt=k=%en*f3!cd+pqa5b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wa-modelomadurez-ultracom.azurewebsites.net']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['wa-modelomadurez-ultracom.azurewebsites.net']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -88,10 +88,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'ultracom-modelomadurez',
+        'USER': 'usermodelomadurez',
+        'PASSWORD': '@Ultracom2024',
+        'HOST': 'ultracom-modelomadurez.database.windows.net',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server',
+            'MARS_Connection': 'True',
+        },
     }
 }
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

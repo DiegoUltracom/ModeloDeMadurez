@@ -1,4 +1,3 @@
-# models.py
 from django.db import models
 
 class Registro(models.Model):
@@ -14,6 +13,12 @@ class Registro(models.Model):
 
     def __str__(self):
         return f"Nombre: {self.nombre}, Apellidos: {self.apellidos}, Correo: {self.correo}, Rol: {self.rol}, País: {self.pais}, Teléfono: {self.telefono}, Empresa: {self.empresa}, Empleados: {self.empleados}, Sector: {self.sector}"
+
+class Registromodelo(models.Model):
+    correo = models.EmailField(unique=True)
+
+    def __str__(self):
+        return str(self.correo)
 
 
 
