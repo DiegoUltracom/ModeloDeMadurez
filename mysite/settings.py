@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-(i1or=0_y3f4np(iq+-5x94@z#=y&^qt=k=%en*f3!cd+pqa5b
 DEBUG = True
 
 ALLOWED_HOSTS = ['wa-modelomadurez-ultracom.azurewebsites.net']
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -85,10 +85,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+try:
+    # Intenta importar el backend de SQL Server
+    import sql_server.pyodbc
+    db_backend = 'sql_server.pyodbc'
+except ImportError:
+    # Si falla, asigna None
+    db_backend = None
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': db_backend,
         'NAME': 'ultracom-modelomadurez',
         'USER': 'usermodelomadurez',
         'PASSWORD': '@Ultracom2024',
