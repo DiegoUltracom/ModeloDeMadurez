@@ -37,6 +37,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['wa-modelomadurez-ultracom.azurewebsites.net']
 #ALLOWED_HOSTS = []
 
+
 # Application definition
 
 INSTALLED_APPS = [
