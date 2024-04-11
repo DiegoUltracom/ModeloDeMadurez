@@ -86,10 +86,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+try:
+    # Intenta importar el backend de SQL Server
+    import sql_server.pyodbc
+    db_backend = 'sql_server.pyodbc'
+except ImportError:
+    # Si falla, asigna None
+    db_backend = None
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': db_backend,
         'NAME': 'ultracom-modelomadurez',
         'USER': 'usermodelomadurez',
         'PASSWORD': '@Ultracom2024',
