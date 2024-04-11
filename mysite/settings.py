@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ultracom-modelomadurez',
         'USER': 'usermodelomadurez',
         'PASSWORD': '@Ultracom2024',
