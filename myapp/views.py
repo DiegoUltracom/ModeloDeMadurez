@@ -6,17 +6,33 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Registro
 from .models import Respuestas
-from .models import Registromodelo
-
 @csrf_exempt
 def home_view(request):
     if request.method == 'POST':
         try:
-            # Obtén el correo del formulario
+            # Obtén los datos del formulario
             correo = request.POST.get('correo')
+            nombre = request.POST.get('nombre')
+            apellidos = request.POST.get('apellidos')
+            rol = request.POST.get('rol')
+            pais = request.POST.get('pais')
+            nombre_empresa = request.POST.get('nombre_empresa')
+            sector_negocio = request.POST.get('sector_negocio')
+            numero_empleados = request.POST.get('numero_empleados')
+            telefono_codigo = request.POST.get('telefono_codigo')
+            telefono_numero = request.POST.get('telefono_numero')
 
-            nuevo_registro = Registromodelo(
-                correo=correo
+            nuevo_registro = Registro(
+                correo=correo,
+                nombre=nombre,
+                apellidos=apellidos,
+                rol=rol,
+                pais=pais,
+                nombre_empresa=nombre_empresa,
+                sector_negocio=sector_negocio,
+                numero_empleados=numero_empleados,
+                telefono_codigo=telefono_codigo,
+                telefono_numero=telefono_numero,
             )
 
             # Guarda la instancia en la base de datos
@@ -32,6 +48,7 @@ def home_view(request):
     else:
         # Si es una solicitud GET, simplemente renderiza el formulario
         return render(request, 'myapp/hello.html')
+
 # Importa la vista 'indexdos'
 def indexdos_view(request):
     return render(request, 'myapp/indexdos.html', {})
@@ -207,7 +224,7 @@ def indexsiete_view(request):
             nueva_respuesta_cuatro.save()
 
             # Puedes redirigir a donde necesites después de completar el séptimo formulario
-            return redirect('iframe')
+            return redirect('pantalla')
 
         except Exception as e:
             # Maneja cualquier otra excepción que pueda ocurrir
@@ -219,45 +236,14 @@ def indexsiete_view(request):
         return render(request, 'myapp/indexsiete.html')
 def iframe_view(request):
     return render(request, 'myapp/iframe.html', {})
+
+@csrf_exempt
+def pantalla_view(request):
+    # Coloca aquí el código para la vista pantalla
+    return render(request, 'myapp/pantalla.html', {})
+
 @csrf_exempt
 def ho_view(request):
-    if request.method == 'POST':
-        try:
-            # Obtén los datos del formulario
-            nombre = request.POST.get('nombre')
-            apellidos = request.POST.get('apellidos')
-            correo = request.POST.get('correo')
-            rol = request.POST.get('rol')
-            pais = request.POST.get('pais')
-            telefono_codigo = request.POST.get('telefono_codigo')
-            telefono_numero = request.POST.get('telefono_numero')
-            nombre_empresa = request.POST.get('nombre_empresa')
-            num_empleados = request.POST.get('num_empleados')
-            sector_negocio = request.POST.get('sector_negocio')
+    return redirect('indexdos')
 
-            nuevo_registro = Registro(
-                nombre=nombre,
-                apellidos=apellidos,
-                correo=correo,
-                rol=rol,
-                pais=pais,
-                telefono=f"{telefono_codigo} {telefono_numero}",
-                empresa=nombre_empresa,
-                empleados=num_empleados,
-                sector=sector_negocio
-            )
 
-            # Guarda la instancia en la base de datos
-            nuevo_registro.save()
-
-            # Redirige a la vista 'indexdos' después de completar el formulario
-            print("Redireccionando a 'indexdos'")
-            return redirect('indexdos')
-
-        except Exception as e:
-            # Maneja cualquier otra excepción que pueda ocurrir
-            error_message = f"Error: {str(e)}"
-            return render(request, 'myapp/indexdos.html', {'error_message': error_message})
-    else:
-        # Si es una solicitud GET, simplemente renderiza el formulario
-        return render(request, 'myapp/ho.html')
