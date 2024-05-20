@@ -1,10 +1,6 @@
 from django import forms
-from .models import Registro, Respuestas, Respuestasdos, Registromodelo
+from .models import Registro, Respuestas, Respuestasdos
 
-class RegistroForm(forms.ModelForm):
-    class Meta:
-        model = Registro
-        fields = '__all__'
 
 class RespuestasForm(forms.ModelForm):
     class Meta:
@@ -16,7 +12,7 @@ class RespuestasdosForm(forms.ModelForm):
         model = Respuestasdos
         fields = '__all__'
 
-class RegistromodeloForm(forms.ModelForm):
+class RegistroForm(forms.ModelForm):
     class Meta:
-        model = Registromodelo
-        fields = ['correo']
+        model = Registro
+        fields = ['correo', 'nombre', 'apellidos', 'rol', 'pais', 'nombre_empresa', 'sector_negocio']

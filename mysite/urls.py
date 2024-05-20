@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp.views import home_view, indexdos_view, ho_view, indextres_view, indexcuatro_view, indexcinco_view, indexseis_view, indexsiete_view, iframe_view 
+from myapp.views import home_view, indexdos_view, ho_view, indextres_view, indexcuatro_view, pantalla_view, indexcinco_view, indexseis_view, indexsiete_view, iframe_view 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('indexcinco/', indexcinco_view, name='indexcinco'),  
     path('indexseis/', indexseis_view, name='indexseis'), 
     path('indexsiete/', indexsiete_view, name='indexsiete'),
-    path('iframe/', iframe_view, name='iframe'),  
+    path('iframe/', iframe_view, name='iframe'), 
+    path('pantalla/', pantalla_view, name='pantalla'),   
 ]
