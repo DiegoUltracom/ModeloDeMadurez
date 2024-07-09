@@ -586,79 +586,104 @@
 
 
           </style>
-  <body>
-    <div class="pag">
-      <div class="div">
-        <div class="overlap">
-          <div class="INICIO">
-            <div class="overlap-group">
-              <div class="rectangle"></div>
-              <img class="FONDO" src="https://i.ibb.co/bJrPfpp/FONDO3.png" />
-              <div class="texto">
-                <div class="overlap-group-2">
-                  <div class="text-wrapper">ULTRACOM S.A.S</div>
-                  <p class="p">EL PODER DE LA INFORMACIÓN</p>
-                </div>
+<body>
+  <!-- Contenedor principal de la página -->
+  <div class="pag">
+    <!-- División para el encabezado -->
+    <div class="div">
+      <!-- División con efecto de superposición -->
+      <div class="overlap">
+        <!-- Sección de inicio -->
+        <div class="INICIO">
+          <!-- Grupo de elementos superpuestos -->
+          <div class="overlap-group">
+            <!-- Rectángulo de fondo -->
+            <div class="rectangle"></div>
+            <!-- Imagen de fondo -->
+            <img class="FONDO" src="https://i.ibb.co/bJrPfpp/FONDO3.png" />
+            <!-- Texto del encabezado -->
+            <div class="texto">
+              <!-- Grupo de texto superpuesto -->
+              <div class="overlap-group-2">
+                <!-- Título principal -->
+                <div class="text-wrapper">ULTRACOM S.A.S</div>
+                <!-- Subtítulo -->
+                <p class="p">EL PODER DE LA INFORMACIÓN</p>
               </div>
-              <img class="LOGO-BLANCO" src="https://i.ibb.co/k4L6gbC/logo.png" />
             </div>
+            <!-- Logotipo en blanco -->
+            <img class="LOGO-BLANCO" src="https://i.ibb.co/k4L6gbC/logo.png" />
           </div>
-          <form method="post" action="{% url 'indexcuatro' %}">
-            {% csrf_token %}
-          <div class="text-wrapper-2">Cuestionario de Madurez Analitica</div>
         </div>
+        <!-- Formulario de cuestionario -->
+        <form method="post" action="{% url 'indexcuatro' %}">
+          <!-- Protección CSRF -->
+          {% csrf_token %}
+          <!-- Título del cuestionario -->
+          <div class="text-wrapper-2">Cuestionario de Madurez Analítica</div>
+        </div>
+        <!-- Explicación de la escala de respuestas -->
         <div class="text-wrapper-3">1</div>
         <div class="text-wrapper-4">2</div>
         <div class="text-wrapper-5">3</div>
         <div class="text-wrapper-6">4</div>
         <div class="text-wrapper-7">5</div>
         <div class="text-wrapper-8">?
+          <!-- Información sobre la escala de respuestas -->
           <div class="tooltip">
-              <div class="element">
-                  1 (Totalmente en desacuerdo): Esta opción indica que la afirmación presentada en la pregunta no se aplica o es altamente inadecuada para la organización.
-                  
-              </div>
-              <div class="element-1">
-                  2 (En desacuerdo): Puede indicar que la situación es menos que ideal o que existen ciertos desafíos o problemas en la organización con respecto a la afirmación.
-                  
-              </div>
-              <div class="element-2">
-                  3 (Neutral): Un valor de 3 en la escala de Likert indica neutralidad. Los encuestados no están ni de acuerdo ni en desacuerdo con la afirmación.
-                  
-              </div>
-              <div class="element-3">
-                  4 (De acuerdo): Esta opción implica que los encuestados están de acuerdo con la afirmación presentada en la pregunta, pero no necesariamente de manera entusiasta.
-                 
+            <!-- Opciones de la escala de Likert -->
+            <div class="element">
+              <!-- Descripción para la opción 1 -->
+              1 (Totalmente en desacuerdo): Esta opción indica que la afirmación presentada en la pregunta no se aplica o es altamente inadecuada para la organización.
             </div>
-              <div class="element-4">
-                  5 (Totalmente de acuerdo): Esta opción indica que los encuestados están completamente de acuerdo con la afirmación presentada en la pregunta.
-              
-              </div>
-          </div>
-      </div>  
-        <div class="group">
-          <div class="overlap-group-wrapper">
-            <div class="div-wrapper">
-              <p class="text-wrapper-9">10.¿Los empleados tienen acceso a la información y los datos necesarios para realizar su trabajo de manera efectiva?</p>
+            <div class="element-1">
+              <!-- Descripción para la opción 2 -->
+              2 (En desacuerdo): Puede indicar que la situación es menos que ideal o que existen ciertos desafíos o problemas en la organización con respecto a la afirmación.
             </div>
-          </div>
-          <div class="group-2">
-            <input type="radio" class="ellipse" id="opcion1" name="respuesta10" value="1">
-            <input type="radio" class="ellipse-2" id="opcion2" name="respuesta10" value="2"required>
-            <input type="radio" class="ellipse-3" id="opcion3" name="respuesta10" value="3">
-            <input type="radio" class="ellipse-4" id="opcion4" name="respuesta10" value="4">
-            <input type="radio" class="ellipse-5" id="opcion5" name="respuesta10" value="5">
+            <div class="element-2">
+              <!-- Descripción para la opción 3 -->
+              3 (Neutral): Un valor de 3 en la escala de Likert indica neutralidad. Los encuestados no están ni de acuerdo ni en desacuerdo con la afirmación.
+            </div>
+            <div class="element-3">
+              <!-- Descripción para la opción 4 -->
+              4 (De acuerdo): Esta opción implica que los encuestados están de acuerdo con la afirmación presentada en la pregunta, pero no necesariamente de manera entusiasta.
+            </div>
+            <div class="element-4">
+              <!-- Descripción para la opción 5 -->
+              5 (Totalmente de acuerdo): Esta opción indica que los encuestados están completamente de acuerdo con la afirmación presentada en la pregunta.
+            </div>
           </div>
         </div>
-        <div class="group-3">
-          <div class="group-4">
-            <div class="overlap-group-3">
-              <p class="text-wrapper-10">
-                11.¿Se fomenta la colaboración entre departamentos para proyectos de análisis de datos?
-              </p>
-            </div>
+      </div>
+      <!-- Preguntas del cuestionario -->
+      <!-- Pregunta 10 -->
+      <div class="group">
+        <div class="overlap-group-wrapper">
+          <div class="div-wrapper">
+            <!-- Enunciado de la pregunta 10 -->
+            <p class="text-wrapper-9">10.¿Los empleados tienen acceso a la información y los datos necesarios para realizar su trabajo de manera efectiva?</p>
           </div>
-          <div class="group-5">
+        </div>
+        <div class="group-2">
+          <!-- Opciones de respuesta para la pregunta 10 -->
+          <input type="radio" class="ellipse" id="opcion1" name="respuesta10" value="1">
+          <input type="radio" class="ellipse-2" id="opcion2" name="respuesta10" value="2" required>
+          <input type="radio" class="ellipse-3" id="opcion3" name="respuesta10" value="3">
+          <input type="radio" class="ellipse-4" id="opcion4" name="respuesta10" value="4">
+          <input type="radio" class="ellipse-5" id="opcion5" name="respuesta10" value="5">
+        </div>
+      </div>
+      <!-- Más preguntas del cuestionario -->
+      <!-- Pregunta 11 -->
+      <div class="group-3">
+        <div class="group-4">
+          <div class="overlap-group-3">
+            <!-- Enunciado de la pregunta 11 -->
+            <p class="text-wrapper-10">11.¿Se fomenta la colaboración entre departamentos para proyectos de análisis de datos?</p>
+          </div>
+        </div>
+        <div class="group-5">
+          <!-- Opciones de respuesta para la pregunta 11 -->
             <input type="radio" class="ellipse" id="opcion1" name="respuesta11" value="1">
             <input type="radio" class="ellipse-2" id="opcion2" name="respuesta11" value="2">
             <input type="radio" class="ellipse-3" id="opcion3" name="respuesta11" value="3"required>
@@ -776,16 +801,20 @@
             <input type="radio" class="ellipse-5" name="respuesta18" value="5">
           </div>
         </div>
-        <div class="overlap-wrapper">
-          <div class="overlap-2"><input type="submit" value="CONTINUAR" class="overlap-2" style="font-family: 'Questrial-Regular', 'Helvetica'; font-size: 36px; color: white;"></div>
-      </div>
-  </form>
-  <div class="FIN"><img class="img" src="https://i.ibb.co/k4L6gbC/logo.png" /></div>
+<!-- Botón de envío del formulario -->
+<div class="overlap-wrapper">
+  <div class="overlap-2">
+    <!-- Botón para continuar -->
+    <input type="submit" value="CONTINUAR" class="overlap-2" style="font-family: 'Questrial-Regular', 'Helvetica'; font-size: 36px; color: white;">
+  </div>
 </div>
-</div>
+
+<!-- Imagen de fin -->
+<div class="FIN"><img class="img" src="https://i.ibb.co/k4L6gbC/logo.png" /></div>
+
+<!-- Imagen decorativa -->
 <div class="segi22">
   <img class="segi2" src="https://i.ibb.co/FBctD6j/segi2.png" style="position: absolute; top: -475px; left: 360px;" />
-</div>
 </div>
 
 </body>

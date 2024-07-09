@@ -7,21 +7,23 @@
   </head>
   <style>
 
-    .INICIO {
+.INICIO {
       background-color: #ffffff;
       display: flex;
       flex-direction: row;
       justify-content: center;
       width: 100%;
     }
-    
+
+    /* Estilos para el contenedor principal */
     .INICIO .div {
       background-color: #ffffff;
       width: 1940px;
       height: 1748px;
       position: relative;
     }
-    
+
+    /* Estilos para la superposición */
     .INICIO .overlap {
       position: absolute;
       width: 1920px;
@@ -29,7 +31,8 @@
       top: -2px;
       left: 0;
     }
-    
+
+    /* Estilos para el contenedor de superposición */
     .INICIO .overlap-wrapper {
       position: absolute;
       width: 1920px;
@@ -37,13 +40,15 @@
       top: 0;
       left: 0;
     }
-    
+
+    /* Estilos para el grupo de superposición */
     .INICIO .overlap-group {
       position: relative;
       height: 624px;
       top: 2px;
     }
-    
+
+    /* Estilos para el rectángulo */
     .INICIO .rectangle {
       position: absolute;
       width: 1920px;
@@ -52,7 +57,8 @@
       left: 0;
       background: linear-gradient(180deg, rgb(62, 76, 89) 7.57%, rgba(62, 76, 89, 0) 100%);
     }
-    
+
+    /* Estilos para la imagen de fondo */
     .INICIO .FONDO {
       position: absolute;
       width: 1920px;
@@ -61,7 +67,8 @@
       left: 0;
       object-fit: cover;
     }
-    
+
+    /* Estilos para el texto */
     .INICIO .texto {
       position: absolute;
       width: 756px;
@@ -69,14 +76,16 @@
       top: 314px;
       left: 188px;
     }
-    
+
+    /* Estilos para el grupo de superposición 2 */
     .INICIO .overlap-group-2 {
       position: relative;
       width: 753px;
       height: 128px;
       left: -1px;
     }
-    
+
+    /* Estilos para el contenedor de texto */
     .INICIO .text-wrapper {
       position: absolute;
       width: 752px;
@@ -90,7 +99,8 @@
       line-height: normal;
       white-space: nowrap;
     }
-    
+
+    /* Estilos para el párrafo */
     .INICIO .p {
       position: absolute;
       top: 103px;
@@ -104,7 +114,8 @@
       line-height: normal;
       white-space: nowrap;
     }
-    
+
+    /* Estilos para el logo blanco */
     .INICIO .LOGO-BLANCO {
       position: absolute;
       width: 367px;
@@ -113,7 +124,8 @@
       left: 86px;
       object-fit: cover;
     }
-    
+
+    /* Estilos para el texto 'Las respuestas que' */
     .INICIO .las-respuestas-que {
       position: absolute;
       width: 1309px;
@@ -127,7 +139,8 @@
       letter-spacing: 0;
       line-height: normal;
     }
-    
+
+    /* Estilos para el grupo */
     .INICIO .group {
       position: absolute;
       width: 1429px;
@@ -135,7 +148,8 @@
       top: 1320px;
       left: 246px;
     }
-    
+
+    /* Estilos para el contenedor del grupo */
     .INICIO .div-wrapper {
       position: relative;
       width: 1427px;
@@ -143,7 +157,8 @@
       background-color: #ec7d36;
       border-radius: 10px;
     }
-    
+
+    /* Estilos para el contenedor de texto 2 */
     .INICIO .text-wrapper-2 {
       position: absolute;
       top: 17px;
@@ -158,7 +173,8 @@
       line-height: normal;
       white-space: nowrap;
     }
-    
+
+    /* Estilos para la sección de final */
     .INICIO .FIN {
       position: absolute;
       width: 1920px;
@@ -167,7 +183,8 @@
       left: 0;
       background-color: #3e4c59;
     }
-    
+
+    /* Estilos para la imagen */
     .INICIO .img {
       position: absolute;
       width: 367px;
@@ -179,45 +196,60 @@
     
         
           </style>
-  <body>
-    <div class="INICIO">
-      <div class="div">
-        <div class="overlap">
-          <div class="overlap-wrapper">
-            <div class="overlap-group">
-              <div class="rectangle"></div>
-              <img class="FONDO" src="https://i.ibb.co/bJrPfpp/FONDO3.png" />
-              <div class="texto">
-                <div class="overlap-group-2">
-                  <div class="text-wrapper">ULTRACOM S.A.S </div>
-                  <p class="p">EL PODER DE LA INFORMACIÓN</p>
-                </div>
+<body>
+  <!-- Contenedor principal de la página de inicio -->
+  <div class="INICIO">
+    <div class="div">
+      <div class="overlap">
+        <!-- Contenedor para superposición de elementos -->
+        <div class="overlap-wrapper">
+          <!-- Grupo de elementos superpuestos -->
+          <div class="overlap-group">
+            <!-- Rectángulo para efectos visuales -->
+            <div class="rectangle"></div>
+            <!-- Imagen de fondo -->
+            <img class="FONDO" src="https://i.ibb.co/bJrPfpp/FONDO3.png" alt="Fondo de la página" />
+            <!-- Contenedor para texto -->
+            <div class="texto">
+              <!-- Grupo de elementos superpuestos para el texto -->
+              <div class="overlap-group-2">
+                <!-- Título de la página -->
+                <div class="text-wrapper">ULTRACOM S.A.S </div>
+                <!-- Subtítulo -->
+                <p class="p">EL PODER DE LA INFORMACIÓN</p>
               </div>
-              <img class="LOGO-BLANCO" src="https://i.ibb.co/k4L6gbC/logo.png" />
             </div>
+            <!-- Logo blanco de la empresa -->
+            <img class="LOGO-BLANCO" src="https://i.ibb.co/k4L6gbC/logo.png" alt="Logo blanco" />
           </div>
-          <p class="las-respuestas-que">
-            Las respuestas que proporcione en este formulario son cruciales para evaluar el éxito de la
-            organización&nbsp;&nbsp;en cada fase de madurez analítica. Le pedimos que responda con sinceridad a todas
-            las preguntas, asignando un valor del 1 al 5 de acuerdo con la escala proporcionada a continuación. En caso
-            de olvidar el significado de cada número en la escala, los recordatorios correspondientes estarán
-            disponibles en la sección de (?).<br /><br />1 (Totalmente en desacuerdo): Esta opción indica que la
-            afirmación presentada en la pregunta no se aplica o es altamente inadecuada para la organización.<br /><br />2
-            (En desacuerdo): Puede indicar que la situación es menos que ideal o que existen ciertos desafíos o
-            problemas en la organización con respecto a la afirmación.<br /><br />3 (Neutral): Un valor de 3 en la
-            escala de Likert indica neutralidad. Los encuestados no están ni de acuerdo ni en desacuerdo con la
-            afirmación.<br /><br />4 (De acuerdo): Esta opción implica que los encuestados están de acuerdo con la
-            afirmación presentada en la pregunta, pero no necesariamente de manera entusiasta.<br /><br />5 (Totalmente
-            de acuerdo): Esta opción indica que los encuestados están completamente de acuerdo con la afirmación
-            presentada en la pregunta.
-          </p>
         </div>
-        <div class="group">
-          <div class="div-wrapper">
-              <a href="{% url 'indextres' %}" class="text-wrapper-2">EMPEZAR</a>
-          </div>
+        <!-- Texto introductorio y explicativo -->
+        <p class="las-respuestas-que">
+          Las respuestas que proporcione en este formulario son cruciales para evaluar el éxito de la
+          organización&nbsp;&nbsp;en cada fase de madurez analítica. Le pedimos que responda con sinceridad a todas
+          las preguntas, asignando un valor del 1 al 5 de acuerdo con la escala proporcionada a continuación. En caso
+          de olvidar el significado de cada número en la escala, los recordatorios correspondientes estarán
+          disponibles en la sección de (?).<br /><br />1 (Totalmente en desacuerdo): Esta opción indica que la
+          afirmación presentada en la pregunta no se aplica o es altamente inadecuada para la organización.<br /><br />2
+          (En desacuerdo): Puede indicar que la situación es menos que ideal o que existen ciertos desafíos o
+          problemas en la organización con respecto a la afirmación.<br /><br />3 (Neutral): Un valor de 3 en la
+          escala de Likert indica neutralidad. Los encuestados no están ni de acuerdo ni en desacuerdo con la
+          afirmación.<br /><br />4 (De acuerdo): Esta opción implica que los encuestados están de acuerdo con la
+          afirmación presentada en la pregunta, pero no necesariamente de manera entusiasta.<br /><br />5 (Totalmente
+          de acuerdo): Esta opción indica que los encuestados están completamente de acuerdo con la afirmación
+          presentada en la pregunta.
+        </p>
       </div>
+      <!-- Grupo de elementos para el botón de inicio -->
+      <div class="group">
+        <div class="div-wrapper">
+          <!-- Enlace para comenzar la encuesta -->
+          <a href="{% url 'indextres' %}" class="text-wrapper-2">EMPEZAR</a>
+        </div>
+      </div>
+      <!-- Contenedor final -->
       <div class="FIN">
+        <!-- Logo blanco de la empresa -->
           <img class="img" src="https://i.ibb.co/k4L6gbC/logo.png" />
       </div>
   </div>
